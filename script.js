@@ -82,7 +82,7 @@ const trainingLessons = [
     icon: "bi-clipboard-check",
     description: "Criação, acompanhamento e organização das ordens de serviço da oficina.",
     video: "https://www.youtube.com/watch?v=5PNhoSIENAg"
-  }
+ }
 ];
 
 const STORAGE_KEY = "meceasy-training-progress-v1";
