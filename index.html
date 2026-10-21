@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111d29">
+
+  <title>Treinamento Mec Easy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top training-navbar">
+    <div class="container navbar-inner">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio" aria-label="Mec Easy - início">
+        <img src="LOGO.png" alt="Mec Easy" class="brand-logo">
+        <span class="brand-name">MecEasy</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Aprenda a utilizar o <span>MecEasy</span> de forma simples e prática.</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRESSO -->
+    <section class="progress-summary-section" id="progresso">
+      <div class="container">
+        <div class="progress-summary-card">
+          <div class="progress-summary-text">
+            <span class="mini-label">SEU PROGRESSO</span>
+            <h2>Continue de onde parou</h2>
+            <p>As aulas concluídas ficam salvas automaticamente neste navegador.</p>
+          </div>
+
+          <div class="overall-progress">
+            <div class="overall-progress-top">
+              <strong id="overallProgressText">0 de 9 aulas concluídas</strong>
+              <span id="overallProgressPercent">0%</span>
+            </div>
+
+            <div class="progress overall-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+              aria-valuenow="0">
+              <div class="progress-bar" id="overallProgressBar" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AULAS -->
+    <section class="lessons-section" id="aulas">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-eyebrow">TREINAMENTOS</span>
+            <h2>Escolha uma área do sistema</h2>
+          </div>
+
+          <span class="lesson-count" id="lessonCount">9 aulas</span>
+        </div>
+
+        <div class="row g-4" id="lessonsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL DA AULA -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content video-modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="video-eyebrow">Aula Mec Easy</span>
+            <h2 class="modal-title fs-5" id="videoModalLabel">Título da aula</h2>
+          </div>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 video-frame-wrapper" id="videoFrameWrapper">
+            <iframe id="youtubeFrame" src="" title="Vídeo do treinamento"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="video-placeholder d-none" id="videoPlaceholder">
+            <div class="video-placeholder-icon">
+              <i class="bi bi-camera-video-off"></i>
+            </div>
+
+            <h3>Vídeo ainda não configurado</h3>
+            <p>
+              Quando subir a aula, basta adicionar o link do YouTube no arquivo
+              <strong>script.js</strong>.
+            </p>
+          </div>
+
+          <div class="video-footer">
+            <div class="video-description">
+              <span>Sobre esta aula</span>
+              <p id="videoDescription"></p>
+            </div>
+
+            <label class="complete-control">
+              <input type="checkbox" id="completeLesson">
+              <span class="complete-check"><i class="bi bi-check-lg"></i></span>
+              <span id="completeLessonText">Marcar como concluída</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
