@@ -81,7 +81,7 @@ const trainingLessons = [
     title: "Ordens de Serviço (OS)",
     icon: "bi-clipboard-check",
     description: "Criação, acompanhamento e organização das ordens de serviço da oficina.",
-    video: "" // ADICIONE AQUI o link do vídeo de OS quando estiver pronto.
+    video: "https://www.youtube.com/watch?v=5PNhoSIENAg"
   }
 ];
 
